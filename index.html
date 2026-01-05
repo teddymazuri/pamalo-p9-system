@@ -29,20 +29,22 @@
 </head>
 <body class="bg-gray-50 p-2 md:p-8">
     <div class="max-w-7xl mx-auto bg-white p-6 shadow-lg rounded-lg border border-gray-200">
-        <!-- Header with Logo -->
-        <div class="flex flex-col items-center mb-6 border-b-2 border-green-700 pb-4">
-            <div class="mb-4">
+        <!-- Header with Logo and Title Side by Side -->
+        <div class="flex flex-row items-center justify-center gap-6 mb-6 border-b-2 border-green-700 pb-4">
+            <div class="shrink-0">
                 <!-- Integrated School Logo -->
-                <div class="w-32 h-32 flex items-center justify-center overflow-hidden">
+                <div class="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center overflow-hidden">
                     <img src="pamalo-logo.png" alt="Pamalo Junior School Logo" class="object-contain w-full h-full" onerror="this.style.display='none'">
                 </div>
             </div>
-            <div class="text-center">
-                <h1 class="text-2xl font-bold text-green-800 uppercase leading-none">Pamalo Junior School</h1>
+            <div class="text-left">
+                <h1 class="text-2xl md:text-3xl font-bold text-green-800 uppercase leading-none">Pamalo Junior School</h1>
                 <p class="text-sm text-gray-600 font-semibold mb-2 tracking-widest uppercase">Mtwapa - Kilifi County</p>
-                <h2 class="text-lg font-semibold text-gray-700 uppercase leading-tight border-t pt-1">P9A Tax Deduction Card</h2>
-                <p class="text-xs font-bold text-gray-500 italic">(Statutory 2025/2026 Format)</p>
-                <p class="text-sm font-medium mt-1">Year: <input type="number" value="2025" class="border-b w-16 text-center focus:outline-none font-bold"></p>
+                <div class="border-t pt-1">
+                    <h2 class="text-lg font-semibold text-gray-700 uppercase leading-tight">P9A Tax Deduction Card</h2>
+                    <p class="text-xs font-bold text-gray-500 italic">(Statutory 2025/2026 Format)</p>
+                    <p class="text-sm font-medium mt-1">Year: <input type="number" value="2025" class="border-b w-16 text-center focus:outline-none font-bold"></p>
+                </div>
             </div>
         </div>
 
@@ -242,7 +244,7 @@
                     <td class="border p-1 font-bold">${m}</td>
                     <td class="border p-1"><input id="basic-${i}" type="number" class="w-full text-right outline-none editable-input" oninput="suggestDeductions(${i})"></td>
                     <td class="border p-1"><input id="ben-${i}" type="number" class="w-full text-right outline-none" oninput="suggestDeductions(${i})"></td>
-                    <td class="border p-1"><input id="qtr-${i}" type="number" class="w-full text-right outline-none" oninput="suggestDeductions(${i})"></td>
+                    <td class="border p-1"><input id="qtr-${i}" type="number" class="w-full text-right outline-none" oninput="calculateRow(${i})"></td>
                     <td class="border p-1 bg-green-50 text-right font-bold" id="gross-val-${i}">0</td>
                     <td class="border p-1"><input id="nssf-${i}" type="number" class="w-full text-right outline-none editable-input font-bold text-blue-800" oninput="calculateRow(${i})"></td>
                     <td class="border p-1 text-right" id="shif-val-${i}">0</td>
