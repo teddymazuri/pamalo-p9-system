@@ -118,7 +118,13 @@
 
         <div class="mt-4 p-4 bg-blue-50 border border-blue-200 rounded text-xs no-print">
             <h3 class="font-bold text-blue-800 mb-1 italic underline">Instruction Note:</h3>
-            <p>Entering <strong>Basic Pay</strong> or <strong>Benefits</strong> will automatically calculate the NSSF (6%) and Housing Levy (1.5%). However, you can still <strong>manually overwrite</strong> these values if necessary.</p>
+            <p>Enter the <strong>Basic Pay</strong> and any <strong>Benefits/Allowances</strong> for each month. The system will automatically calculate:</p>
+            <ul class="list-disc ml-5 mt-1">
+                <li><strong>NSSF:</strong> Tier I & II (6% capped at Ksh 4,320).</li>
+                <li><strong>SHIF:</strong> 2.75% of Gross (min Ksh 300).</li>
+                <li><strong>Housing Levy:</strong> 1.5% of Gross.</li>
+                <li><strong>Taxable Pay:</strong> Gross minus (NSSF + SHIF + AHL).</li>
+            </ul>
         </div>
 
         <!-- Bottom Certification -->
